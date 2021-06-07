@@ -1,0 +1,125 @@
+body {
+  margin-top: 40px;
+}
+
+input {
+  border: 2px solid #a5def1;
+  padding: 4px 10px;
+}
+
+h1 {
+  color: #facc2e;
+  font-size: 50px;
+  margin: 0;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 5px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.container {
+  background: #ebf7fd;
+  border: 2px solid #a5def1;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Roboto Slab", serif;
+  padding: 30px 30px;
+  width: 800px;
+}
+
+.search-button {
+  background-color: #a5def1;
+  border: 2px solid #a5def1;
+  font-size: 16px;
+  padding: 4px 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.search-button:hover {
+  background-color: #ebf7fd;
+  cursor: pointer;
+}
+
+.current-temperature {
+  color: #facc2e;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 60px;
+}
+
+.current-location-button {
+  background-color: #a5def1;
+  border: 2px solid #a5def1;
+  font-size: 16px;
+  padding: 4px 10px;
+  position: relative;
+  right: 27px;
+  transition: all 200ms ease-in-out;
+}
+
+.current-location-button:hover {
+  background-color: #ebf7fd;
+  cursor: pointer;
+}
+
+.date-hour,
+.precipitation,
+.wind {
+  font-size: 14px;
+  margin: 0;
+}
+
+.info-searched-city {
+  margin-left: 100px;
+}
+
+.sun-image {
+  left: 40px;
+  position: relative;
+  top: 25px;
+  width: 200px;
+}
+
+.card-next-days {
+  background-color: #a5def1;
+  border: 1px solid #a5def1;
+  border-radius: 15px;
+  padding: 0px;
+}
+
+.max-min {
+  font-size: 15px;
+  line-height: 5px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.icons-next-days {
+  display: block;
+  margin: 0 auto;
+  width: 70px;
+}
+
+footer {
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+#link-celsius,
+#link-fahrenheit {
+  color: #facc2e;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+#link-celsius:hover,
+#link-fahrenheit:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
