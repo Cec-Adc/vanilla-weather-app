@@ -11,13 +11,126 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-    <title>Weather App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1>Hello World</h1>
-      <button class="btn btn-primary">click me</button>
+      <div class="row">
+        <div class="col">
+          <form id="search-form">
+            <input
+              type="search"
+              placeholder="Enter a city"
+              autofocus
+              autocomplete="off"
+              id="search-text-input"
+            />
+            <input type="submit" value="Search" class="search-button" />
+          </form>
+        </div>
+        <div class="col">
+          <button class="current-location-button" id="current-location-button">
+            📍 Current location
+          </button>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-6">
+          <section class="info-searched-city">
+            <h1 id="current-city">Hamburg</h1>
+            <div class="current-temperature">
+              <span id="temp">12</span><a href="#" id="link-celsius">°C</a>
+            </div>
+            <br />
+            <p class="date-hour">
+              <span id="day">Monday</span> - <span id="hour">17</span>:<span
+                id="minutes"
+                >30</span
+              >
+            </p>
+            <br />
+            <p class="precipitation" id="description"></p>
+            <p class="precipitation">Humidity: <span id="humidity">0</span>%</p>
+            <p class="wind">Wind: <span id="windspeed">8</span> km/h</p>
+          </section>
+        </div>
+        <div class="col-6">
+          <img src="images/sun.png" alt="sunny" class="sun-image" />
+        </div>
+      </div>
+      <br />
+      <div class="card card-next-days">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <h5>Mon</h5>
+              <br /><img
+                src="images/cloud.png"
+                alt="cloudy"
+                class="icons-next-days"
+              />
+              <br />
+              <p class="max-min">6° <strong>13°</strong></p>
+            </div>
+            <div class="col">
+              <h5>Tue</h5>
+              <br /><img
+                src="images/cloud_sun_and_rain.png"
+                alt="cloudy_sunny_rainy"
+                class="icons-next-days"
+              />
+              <br />
+              <p class="max-min">4° <strong>10°</strong></p>
+            </div>
+            <div class="col">
+              <h5>Wed</h5>
+              <br /><img
+                src="images/sun_and_cloud.png"
+                alt="cloudy_sunny"
+                class="icons-next-days"
+              />
+              <br />
+              <p class="max-min">3° <strong>10°</strong></p>
+            </div>
+            <div class="col">
+              <h5>Thu</h5>
+              <br /><img
+                src="images/sun_and_cloud.png"
+                alt="cloudy_sunny"
+                class="icons-next-days"
+              />
+              <br />
+              <p class="max-min">4° <strong>11°</strong></p>
+            </div>
+            <div class="col">
+              <h5>Fri</h5>
+              <br /><img
+                src="images/sun.png"
+                alt="sunny"
+                class="icons-next-days"
+              />
+              <br />
+              <p class="max-min">7° <strong>15°</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <footer>
+      Coded by Cécile -
+      <a href="https://github.com/Cec-Adc" target="_blank">GitHub Profile</a
+      ><br />Icons from
+      <a
+        href="https://www.iconfinder.com/iconsets/the-weather-is-nice-today"
+        target="_blank"
+        >Iconfinder</a
+      >
+    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
