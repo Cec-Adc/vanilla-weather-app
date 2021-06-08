@@ -73,6 +73,10 @@ h5 {
   margin: 0;
 }
 
+.precipitation::first-letter {
+  text-transform: capitalize;
+}
+
 .info-searched-city {
   margin-left: 100px;
 }
@@ -80,7 +84,7 @@ h5 {
 .sun-image {
   left: 45px;
   position: relative;
-  top: 45px;
+  top: 50px;
   width: 160px;
 }
 
