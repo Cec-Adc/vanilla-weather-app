@@ -23,7 +23,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-8">
           <form id="search-form">
             <input
               type="search"
@@ -35,98 +35,42 @@
             <input type="submit" value="Search" class="search-button" />
           </form>
         </div>
-        <div class="col">
+        <div class="col-4">
           <button class="current-location-button" id="current-location-button">
-            📍 Current location
+            📍 Your location
           </button>
         </div>
       </div>
       <br />
-      <div class="row">
-        <div class="col-6">
-          <section class="info-searched-city">
-            <h1 id="current-city">Hamburg</h1>
-            <div class="current-temperature">
-              <span id="temp">12</span> <a href="#" id="link-celsius">°C</a> |
-              <a href="#" id="link-fahrenheit">°F</a>
-            </div>
-            <br />
-            <p class="date-hour">
-              Last updated: <span id="day">Monday</span>,
-              <span id="hour">17</span>:<span id="minutes">30</span>
-            </p>
-            <br />
-            <p class="precipitation" id="description"></p>
-            <p class="precipitation">Humidity: <span id="humidity">0</span>%</p>
-            <p class="wind">Wind: <span id="windspeed">8</span> km/h</p>
-          </section>
+      <section class="info-searched-city">
+        <h1 id="current-city">Hamburg</h1>
+        <div class="current-temperature">
+          <span id="temp">12</span>
+          <a href="#" class="units" id="link-celsius">°C</a> |
+          <a href="#" class="units" id="link-fahrenheit">°F</a>
         </div>
-        <div class="col-6">
+        <p class="date-hour">
+          Last updated: <span id="day">Monday</span>,
+          <span id="hour">17</span>:<span id="minutes">30</span>
+        </p>
+      </section>
+      <br />
+      <div class="row">
+        <div class="col-4">
           <img src="" alt="" class="sun-image" id="icon" />
         </div>
-      </div>
-      <br />
-      <div class="card card-next-days">
-        <div class="card-body">
-          <div class="row">
-            <div class="col">
-              <h5>Mon</h5>
-              <br /><img
-                src="images/cloud.png"
-                alt="cloudy"
-                class="icons-next-days"
-              />
-              <br />
-              <p class="max-min">6° <strong>13°</strong></p>
-            </div>
-            <div class="col">
-              <h5>Tue</h5>
-              <br /><img
-                src="images/cloud_sun_and_rain.png"
-                alt="cloudy_sunny_rainy"
-                class="icons-next-days"
-              />
-              <br />
-              <p class="max-min">4° <strong>10°</strong></p>
-            </div>
-            <div class="col">
-              <h5>Wed</h5>
-              <br /><img
-                src="images/sun_and_cloud.png"
-                alt="cloudy_sunny"
-                class="icons-next-days"
-              />
-              <br />
-              <p class="max-min">3° <strong>10°</strong></p>
-            </div>
-            <div class="col">
-              <h5>Thu</h5>
-              <br /><img
-                src="images/sun_and_cloud.png"
-                alt="cloudy_sunny"
-                class="icons-next-days"
-              />
-              <br />
-              <p class="max-min">4° <strong>11°</strong></p>
-            </div>
-            <div class="col">
-              <h5>Fri</h5>
-              <br /><img
-                src="images/sun.png"
-                alt="sunny"
-                class="icons-next-days"
-              />
-              <br />
-              <p class="max-min">7° <strong>15°</strong></p>
-            </div>
-          </div>
+        <div class="col-8">
+          <p class="description" id="description"></p>
+          <p class="precipitation">Humidity: <span id="humidity"></span>%</p>
+          <p class="wind">Wind: <span id="windspeed"></span> km/h</p>
         </div>
       </div>
     </div>
-    <br />
     <footer>
       Coded by Cécile -
-      <a href="https://github.com/Cec-Adc" target="_blank">GitHub Profile</a>
+      <a href="https://github.com/Cec-Adc/vanilla-weather-app" target="_blank"
+        >GitHub Profile</a
+      >
     </footer>
     <script src="src/index.js"></script>
   </body>

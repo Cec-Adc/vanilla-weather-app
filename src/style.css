@@ -3,13 +3,14 @@ body {
 }
 
 input {
-  border: 2px solid #a5def1;
+  border: 2px solid #ebf7fd;
   padding: 4px 10px;
 }
 
 h1 {
-  color: #facc2e;
-  font-size: 50px;
+  color: #ec6e4c;
+  font-size: 35px;
+  font-weight: bold;
   margin: 0;
 }
 
@@ -22,39 +23,50 @@ h5 {
 }
 
 .container {
-  background: #ebf7fd;
-  border: 2px solid #a5def1;
+  background: #a5def1;
+  border: 2px solid #ebf7fd;
   border-radius: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   font-family: "Roboto Slab", serif;
   padding: 30px 30px;
-  width: 800px;
+  max-width: 540px;
 }
 
 .search-button {
-  background-color: #a5def1;
-  border: 2px solid #a5def1;
-  font-size: 16px;
+  background-color: #ebf7fd;
+  border: 2px solid #ebf7fd;
+  font-size: 15px;
   padding: 4px 10px;
   transition: all 200ms ease-in-out;
 }
 
 .search-button:hover {
-  background-color: #ebf7fd;
+  background-color: #a5def1;
   cursor: pointer;
 }
 
 .current-temperature {
-  color: #facc2e;
-  font-size: 45px;
+  color: #ec6e4c;
+  font-size: 32px;
   font-weight: bold;
-  line-height: 60px;
+  line-height: 40px;
+}
+
+.units {
+  color: #ec6e4c;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.units:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .current-location-button {
-  background-color: #a5def1;
-  border: 2px solid #a5def1;
-  font-size: 16px;
+  background-color: #ebf7fd;
+  border: 2px solid #ebf7fd;
+  font-size: 15px;
   padding: 4px 10px;
   position: relative;
   right: 27px;
@@ -62,50 +74,31 @@ h5 {
 }
 
 .current-location-button:hover {
-  background-color: #ebf7fd;
+  background-color: #a5def1;
   cursor: pointer;
 }
 
-.date-hour,
-.precipitation,
-.wind {
-  font-size: 14px;
+.date-hour {
+  font-size: 11px;
   margin: 0;
 }
 
-.precipitation::first-letter {
+.precipitation,
+.description,
+.wind {
+  font-size: 13px;
+  margin: 0;
+}
+
+.description::first-letter {
   text-transform: capitalize;
 }
 
-.info-searched-city {
-  margin-left: 100px;
-}
-
 .sun-image {
-  left: 45px;
+  bottom: 5px;
+  left: 40px;
   position: relative;
-  top: 50px;
-  width: 70px;
-}
-
-.card-next-days {
-  background-color: #a5def1;
-  border: 1px solid #a5def1;
-  border-radius: 15px;
-  padding: 0px;
-}
-
-.max-min {
-  font-size: 15px;
-  line-height: 5px;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.icons-next-days {
-  display: block;
-  margin: 0 auto;
-  width: 70px;
+  width: 64px;
 }
 
 footer {
@@ -113,17 +106,4 @@ footer {
   font-size: 12px;
   padding-top: 20px;
   text-align: center;
-}
-
-#link-celsius,
-#link-fahrenheit {
-  color: #facc2e;
-  text-decoration: none;
-  font-size: 40px;
-}
-
-#link-celsius:hover,
-#link-fahrenheit:hover {
-  cursor: pointer;
-  text-decoration: underline;
 }
