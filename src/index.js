@@ -17,6 +17,8 @@ function displayWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -54,8 +56,6 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Hamburg");
-
 // Day + time
 
 let now = new Date();
@@ -91,3 +91,28 @@ if (minutes < 10) {
   let currentMinutes = document.querySelector("#minutes");
   currentMinutes.innerHTML = `${minutes}`;
 }
+
+//Celsius to Fahrenheit
+
+function displayFarhrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#link-fahrenheit");
+fahrenheitLink.addEventListener("click", displayFarhrenheitTemperature);
+
+let celsiusLink = document.querySelector("#link-celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("Hamburg");
