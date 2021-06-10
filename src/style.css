@@ -17,7 +17,7 @@ h1 {
 h5 {
   font-size: 14px;
   font-weight: 600;
-  line-height: 5px;
+  line-height: 0px;
   margin-bottom: 0;
   text-align: center;
 }
@@ -115,15 +115,28 @@ footer {
   padding: 0px;
 }
 
+.card-body {
+  padding: 6px;
+}
+
+.days-forecast {
+  position: relative;
+  top: 10px;
+}
+
 .max-min {
   font-size: 13px;
-  line-height: 5px;
+  line-height: 0px;
   margin-bottom: 0;
   text-align: center;
+  position: relative;
+  bottom: 12px;
 }
 
 .icons-next-days {
   display: block;
   margin: 0 auto;
+  position: relative;
+  bottom: 3px;
   width: 60px;
 }

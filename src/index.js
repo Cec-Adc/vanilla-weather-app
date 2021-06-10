@@ -92,6 +92,34 @@ if (minutes < 10) {
   currentMinutes.innerHTML = `${minutes}`;
 }
 
+//Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+        <h5 class="days-forecast">${day}</h5>
+        <br />
+        <img
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt="cloudy"
+          class="icons-next-days"
+        />
+        <br />
+        <p class="max-min">
+          <span id="min">6°</span>
+          <span id="max"><strong>13°</strong></span>
+        </p>
+      </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //Celsius to Fahrenheit
 
 function displayFarhrenheitTemperature(event) {
@@ -116,3 +144,4 @@ let celsiusLink = document.querySelector("#link-celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Hamburg");
+displayForecast();
