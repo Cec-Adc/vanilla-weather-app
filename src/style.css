@@ -15,10 +15,17 @@ h1 {
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 5px;
   margin-bottom: 0;
+  text-align: center;
+}
+
+footer {
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -101,9 +108,22 @@ h5 {
   width: 64px;
 }
 
-footer {
-  font-family: "Source Code Pro", monospace;
-  font-size: 12px;
-  padding-top: 20px;
+.card-next-days {
+  background-color: #a5def1;
+  border: 2px solid #ebf7fd;
+  border-radius: 15px;
+  padding: 0px;
+}
+
+.max-min {
+  font-size: 13px;
+  line-height: 5px;
+  margin-bottom: 0;
   text-align: center;
+}
+
+.icons-next-days {
+  display: block;
+  margin: 0 auto;
+  width: 60px;
 }
