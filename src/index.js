@@ -1,5 +1,12 @@
 // Search engine
 
+function getForecast(coordinates) {
+  let apiKey = "2d28dad272ae6560bc7be5816c6e997c";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(
@@ -19,6 +26,8 @@ function displayWeatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -94,7 +103,8 @@ if (minutes < 10) {
 
 //Forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#weather-forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
@@ -144,4 +154,3 @@ let celsiusLink = document.querySelector("#link-celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Hamburg");
-displayForecast();
