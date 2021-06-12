@@ -4,6 +4,7 @@ body {
 
 input {
   border: 2px solid #ebf7fd;
+  border-radius: 10px;
   padding: 4px 10px;
 }
 
@@ -44,15 +45,18 @@ footer {
   max-width: 540px;
 }
 
-.search-button {
+.search-button,
+.current-location-button {
   background-color: #ebf7fd;
   border: 2px solid #ebf7fd;
+  border-radius: 10px;
   font-size: 15px;
   padding: 4px 10px;
   transition: all 200ms ease-in-out;
 }
 
-.search-button:hover {
+.search-button:hover,
+.current-location-button:hover {
   background-color: transparent;
   cursor: pointer;
 }
@@ -62,19 +66,6 @@ footer {
   font-size: 32px;
   font-weight: bold;
   line-height: 40px;
-}
-
-.current-location-button {
-  background-color: #ebf7fd;
-  border: 2px solid #ebf7fd;
-  font-size: 15px;
-  padding: 4px 10px;
-  transition: all 200ms ease-in-out;
-}
-
-.current-location-button:hover {
-  background-color: transparent;
-  cursor: pointer;
 }
 
 .date-hour {
