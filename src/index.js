@@ -25,8 +25,6 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-  celsiusTemperature = response.data.main.temp;
-
   getForecast(response.data.coord);
 }
 
@@ -141,28 +139,5 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-//Celsius to Fahrenheit
-
-function displayFarhrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temp");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#link-fahrenheit");
-fahrenheitLink.addEventListener("click", displayFarhrenheitTemperature);
-
-let celsiusLink = document.querySelector("#link-celsius");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Hamburg");
