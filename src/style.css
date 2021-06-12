@@ -12,6 +12,7 @@ h1 {
   font-size: 35px;
   font-weight: bold;
   margin: 0;
+  padding-top: 13px;
 }
 
 h5 {
@@ -30,12 +31,16 @@ footer {
 }
 
 .container {
-  background: #a5def1;
+  background: linear-gradient(
+    180.3deg,
+    rgb(214, 224, 255) 37.2%,
+    rgb(254, 168, 168) 137.3%
+  );
   border: 2px solid #ebf7fd;
   border-radius: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   font-family: "Roboto Slab", serif;
-  padding: 30px 30px;
+  padding: 25px 25px;
   max-width: 540px;
 }
 
@@ -48,7 +53,7 @@ footer {
 }
 
 .search-button:hover {
-  background-color: #a5def1;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -59,29 +64,16 @@ footer {
   line-height: 40px;
 }
 
-.units {
-  color: #ec6e4c;
-  font-size: 32px;
-  text-decoration: none;
-}
-
-.units:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 .current-location-button {
   background-color: #ebf7fd;
   border: 2px solid #ebf7fd;
   font-size: 15px;
   padding: 4px 10px;
-  position: relative;
-  right: 27px;
   transition: all 200ms ease-in-out;
 }
 
 .current-location-button:hover {
-  background-color: #a5def1;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -101,15 +93,15 @@ footer {
   text-transform: capitalize;
 }
 
-.sun-image {
+.main-icon {
   bottom: 5px;
   left: 40px;
   position: relative;
-  width: 70px;
+  width: 74px;
 }
 
 .card-next-days {
-  background-color: #a5def1;
+  background: transparent;
   border: 2px solid #ebf7fd;
   border-radius: 15px;
   margin-top: 10px;
@@ -122,7 +114,7 @@ footer {
 
 .days-forecast {
   position: relative;
-  top: 10px;
+  top: 14px;
 }
 
 .max-min {
